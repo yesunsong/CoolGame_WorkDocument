@@ -1,0 +1,63 @@
+*熟悉常用的数据结构
+基本数据结构：int（Integer），byte(Byte),short(Short),String
+Integer.valueof(new Integer)
+
+ArrayList、LinkedList(有序)
+HashMap、LinkedHashMap(有序)
+
+
+*熟悉项目的常用控件
+AButton、
+
+ACheckBox、
+ALoadingBar、
+ATab、
+BitmapFont、
+Label、LabelLine、
+SpinEdit、
+Sprite、
+
+AWindow
+NinePatchWindow
+SecondWindow
+CommonWindow
+
+
+*了解SVN基本操作
+svn checkout
+svn update
+svn commit
+svn clean up
+svn compare
+svn confilict
+记住：一定要先update再commit
+推荐：代码比较工具 Beyond Compare
+Settings->Diff Viewer->配置第一项和第二项
+
+*熟悉项目的工具（Tools目录）
+AnimExplorer.bat
+场景.jar.bat
+地图.bat
+动作.bat
+
+*了解常用的调试方法
+
+*了解以前的旧代码框架
+
+
+*熟悉Eclipse的一些快捷键
+Ctrl+H:全局搜索文本
+Ctrl+Alt+H:搜索类引用/变量引用[呈现出调用顺序]
+Ctrl+Shift+G:搜索类引用/变量引用
+Ctrl+Alt+下降箭头：复制一行
+
+*Utils介绍
+Util：通用工具类
+MaterialUtil：素材工具类
+DebugUtil：调试信息工具类
+GraphicsUtils：绘图工具类
+
+
+注意事项：
+每次做模块之前，都进行文档解读和提供解决思路。
+没有做完的模块，暂时不要提交相关的逻辑
