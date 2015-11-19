@@ -1,0 +1,11 @@
+0.CommonWindow左侧页签栏支持 滑动
+1.控件的perform（）方法按照是否触摸到 返回 true/false。优化过:AWindow、ATab，其他控件检查都没错。
+2.从MaterialUtil中分离出DebugUtil和GraphicsUtils。
+	***建议分离出更多的工具类。
+	参考: http://blog.csdn.net/lmj623565791/article/details/38965311 [Android快速开发系列 10个常用工具类]
+3.***素材"零件"。【组合的思想】【测试引用Material里的资源而不释放，会不会无限增加内存开销】
+4.NAList支持 down检测。***需要优化的地方：所有的控件都要有自检down和up的逻辑。
+5.***Sprite实现perform（）方法，进而实现触摸事件。
+6.***位图字体增加 大类型，解决 位图字体对应不同资源的问题。
+7.***ATextView绘制优化。可见第一行不变，不需要重新计算。
+8.***实现 新的监听事件机制
