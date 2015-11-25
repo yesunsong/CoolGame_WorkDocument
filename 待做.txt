@@ -12,8 +12,53 @@ aloadingbar修改 文本显示，改为 label
 
 effectwindow 需要支持 播放多个特效
 
+优化 spinedit，把里面的资源全部替换
+
+scene.regionalMap 存在多处初始化
+
+写basecomponent
+
+up和move事件需要检测down事件
+
+放弃日常任务
+***
+新窗口的添加说明：
+1.不同的窗口会被添加到不同的容器里。目前游戏的容器有四个：hudFunContainer、topFunContainer、bottomFunContainer 
+
+
+窗口的写法如下：
+if (!isCalculatCount(isCalculatCount)) {
+			closeArea[0] = 0;
+			closeArea[1] = 0;
+			closeArea[2] = 0;
+			closeArea[3] = 0;
+			windowPos[0] = (short) (viewWidth - MiniMapIconWindow.WINDOW_WIDTH);
+			windowPos[1] = 15;
+			miniMapIconWindow = new MiniMapIconWindow(
+					"latestui/hud/ditukuang.spr", windowPos, closeArea);
+			miniMapIconWindow.setVisible(false);
+			miniMapIconWindow.setListener(null);
+			// miniMapIconWindow.setPRI(-1);
+			HudLayoutManager.getInstance().addToHudContainer(miniMapIconWindow);
+		}
+
+2.窗口黑框的绘制
+
+子窗口继承 如下方法即可。
+/** 是否绘制黑底框 */
+	protected boolean isDrawHeidikuang() {
+		return false;
+	}
+
+
 
 ***
+
+NAlist之所以不需要在cell里的perform方法检测是否在cell范围内，是因为 目前的cell都是紧挨着的。
+
+***
+日常任务与主支线的逻辑已经统一。
+
 日常任务与主支线逻辑存在严重问题：
 
 日常任务的交接npc在下发任务数据时就有。这时不会下发 7006。只有在NPC状态发生改变的时候，才会这么下发。
@@ -23,32 +68,19 @@ effectwindow 需要支持 播放多个特效
 
 这是这两个逻辑最大的不同。
 ***
-
 可接    npc
 未完成  杀怪
 完成    npc
+***
 
-
-
-svn version 26520
-
-label增加时间显示 ——ok
 
 任务追踪栏的窗口宽度+15
 文字超出去 左右摇摆
 
 传送过去自动战斗
 
-worldmap地图的优化【UIContainer的层级已经修改】——ok
+功能入口——子窗口——子窗口页签id——小助手
 
 
-[一姬当千] 写邮件 附加物品的数量选择框会下沉到底层。	
 
 
-	 [一姬当千] 进入天翼界面死机或闪退。	
-
-
-	 [一姬当千] 任务快捷栏上下滑动，出快捷栏位置时，快捷栏会消失。	
-
-
-	 [一姬当千] 任务详细界面内日常任务没有按已完成、未完成、可接排序。	
