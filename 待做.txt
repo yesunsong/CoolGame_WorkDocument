@@ -18,9 +18,16 @@ scene.regionalMap 存在多处初始化
 
 写basecomponent
 
+ALoaddingBar有问题
+
 up和move事件需要检测down事件
 
-放弃日常任务
+整理GoodsListWindow
+
+==++===++++=+===++=
+1.测试 军团可进入时的提示框
+
++_=+====++====
 ***
 新窗口的添加说明：
 1.不同的窗口会被添加到不同的容器里。目前游戏的容器有四个：hudFunContainer、topFunContainer、bottomFunContainer 
