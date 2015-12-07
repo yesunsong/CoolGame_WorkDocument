@@ -1,5 +1,3 @@
-aloadingbar修改 文本显示，改为 label
-
 任务进度更新至 详细界面
 
 升级后的任务下发
@@ -18,15 +16,19 @@ scene.regionalMap 存在多处初始化
 
 写basecomponent
 
-ALoaddingBar有问题
-
-up和move事件需要检测down事件
-
 整理GoodsListWindow
+
+textmanager的line应该显示的是一行的文本，这一行中 应该记录了这一行的文本信息，比如颜色和大小
+word 记录 字体的颜色 大小，图片资源，位置信息{宽度，高度}
+line由
 
 ==++===++++=+===++=
 1.测试 军团可进入时的提示框
 
+测试 NinePatchWindow的构造函数和 设置绘制类型的逻辑
+测试 aloadingbar的文本显示 及其 位置修改
+测试 label的getTextWidth，没问题的话，可以用在 aloadingbar中。
+测试 label的方向，没问题，就可以考虑替换abutton里的逻辑
 +_=+====++====
 ***
 新窗口的添加说明：
@@ -87,7 +89,3 @@ NAlist之所以不需要在cell里的perform方法检测是否在cell范围内，是因为 目前的cell都
 传送过去自动战斗
 
 功能入口——子窗口——子窗口页签id——小助手
-
-
-
-
