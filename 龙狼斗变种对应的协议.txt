@@ -1,0 +1,32 @@
+龙狼斗     巅峰对决   永恒之战
+MBReq9501  MBReq9680  MBReq9690
+MBReq9502  MBReq9681  MBReq9691
+
+MBPush9500 MBPush9680 MBPush9690
+MBRsp9501  MBRsp9681  MBRsp9691
+MBRsp9503  MBRsp9682  MBRsp9692
+MBPush9506 MBPush9685 MBPush9695
+MBPush9508 MBPush9684 MBPush9694
+MBPush9505 MBPush9683 MBPush9693
+
+MaterialUtil.isInContestScene() || MaterialUtil.isInDFDJ()
+					|| MaterialUtil.isInYHZZ()
+
+
+场景切换的规则
+PK切换的规则
+是否允许PK的规则
+
+场景对应的控件显隐规则
+
+玩家头顶的显示规则
+
+
+永恒之战
+
+An error occurred while collecting items to be installed
+session context was:(profile=epp.package.java, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+No artifact repository available.
+noArtifactRepositoriesAvailable
+
+org.springsource.ide.eclipse.gradel.feature
