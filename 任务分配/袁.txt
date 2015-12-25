@@ -1,0 +1,15 @@
+只能消耗元宝的功能，当元宝不足时： 
+	寻宝  元宝寻宝  点击寻宝，弹出元宝不足提示框：“元宝不足，是否前往充值”，点击充值，跳转至充值界面。
+	
+	=====================w我是分割线========================
+只能消耗元宝的功能，当元宝不足时：
+在相应的逻辑位置添加如下代码：
+if (!CommandManager.getInstance().checkIngotCommand(trackCost, this)) {
+			return;
+		}
+		
+可消耗元宝/绑定元宝的功能，当元宝和绑定元宝总和数量不足时：
+在相应的逻辑位置添加如下代码：
+if (!CommandManager.getInstance().checkTotalIngotCommand(trackCost, this)) {
+			return;
+		}
