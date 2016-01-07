@@ -21,3 +21,70 @@ uicontainer不支持 设置 -3 -2，默认从-1开始——okchogn
 背包的aloadingbar显示有问题
 
 检查安卓权限
+
+对象的复用应注意的问题：
+
+
+倒计时 不断的设置值
+
+主循环里 活动一直在做更新。如果可以根据状态，去触发那是最好的。
+
+1.loading
+2.中断
+3.断线重连
+
+1.不能在异步线程里切换主线程里的游戏状态
+
+Processing a MESSAGE_RECEIVED for session 1
+
+
+小米游戏充值
+
+SurfaceView(22738): visibleChanged -- surfaceDestroyed
+
+SurfaceView(5081): surfaceChanged -- format=4 w=1280 h=720
+
+
+1.按关机键使机器进入休眠状态，然后再解除休眠回来——重登
+2.在登录界面，开其他应用，切回来，登录界面
+3.在场景界面，开其他应用，切回来，重新开始
+
+1.npc增加 蓝光 ——OK
+2.以玩家为中心，扩散加载摆件 ——OK
+3.进度条缓慢加载 ——OK
+4.传送门 ——OK
+
+
+12-30 22:03:38.391: I/setLifeRoleId_remove_lifes(31194): 位置29,39 /RoldID:-130
+
+
+12-30 22:26:30.280: I/System.out(7851): [CDS]EAGAIN or EWOULDBLOCK in Recvfrom
+
+
+
+
+离开视野，再进入视野——协议堆积
+
+有角色：请求服务器列表-》请求角色列表
+无角色：
+
+
+一开始登录游戏时，就断开网络
+在server时，断开网络
+
+在登录
+
+01-07 10:54:25.350: I/logout(21048): ++++++++++++++++++++
+
+
+断线重连，连接成功之后，请求1001
+
+new Socket error!!!
+
+
+背包数据
+怪物
+1322-回购
+玩家的位置
+
+测试下静慰那边的 任务会不会闪退？
