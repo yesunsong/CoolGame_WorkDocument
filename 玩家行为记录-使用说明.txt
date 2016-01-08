@@ -1,0 +1,12 @@
+玩家行为记录
+一、说明
+目前玩家的行为记录支持的控件：AButton、ACheckBox、NAList 。
+GoodsCell也支持显式调用 发送玩家的行为操作的接口。（如果GoodsCell没有加到NAList,但是又有触摸事件，就可以显式调用）
+BehaviorType是玩家行为的枚举类，由export_client.bat生成。生成的.java文件在data/bin下面。
+二、用法
+控件的用法如下：
+Control.setBehaviorID(BehaviorType.BB_GOUMAI);
+
+GoodsCell的用法如下：
+GoodsCell.setBehaviorID(BehaviorType.BB_GOUMAI);
+有触摸事件时，显式调用GoodsCell.sendPlayerBehavior();
