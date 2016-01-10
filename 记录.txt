@@ -1,0 +1,44 @@
+打包时要使用jdk1.6版本
+
+bad class file magic (cafebabe) or version (0033.0000)
+
+解决方案：jdk版本问题，不要使用1.7的，用1.6的
+
+小米——ok
+华为——打包成功，登录不进去
+oppo——缺少资源
+self——没有把渠道过滤掉
+UC——OK
+易接——ok
+
+
+打包华为渠道，在生成dex阶段，会出现如下错误：
+UNEXPECTED TOP-LEVEL ERROR:
+     [exec]     [apply] java.lang.OutOfMemoryError: Java heap space
+
+解决方案：在F:\AndroidIDE\sdk\build-tools\17.0.0的dex.bat修改最大heap space大小
+set defaultXmx=-Xmx2048M
+
+==================
+ ant UNEXPECTED TOP-LEVEL ERROR 2011-11-01 13:42:40
+分类： 嵌入式
+今天我们有个项目到了最后发布阶段，最后的一步测试，我做混淆发布，出现这个错误：
+    [apply] UNEXPECTED TOP-LEVEL ERROR:
+    [apply] java.lang.OutOfMemoryError: Java heap space
+    [apply]     at com.android.dx.util.IntList.makeImmutable(IntList.java:47)
+    [apply]     at com.android.dx.cf.code.Ropper.processBlock(Ropper.java:898)
+    [apply]     at com.android.dx.cf.code.Ropper.doit(Ropper.java:636)
+    [apply]     at com.android.dx.cf.code.Ropper.convert(Ropper.java:253)
+    [apply]     at com.android.dx.dex.cf.CfTranslator.processMethods(CfTranslato
+r.java:252)
+    [apply]     at com.android.dx.dex.cf.CfTranslator.translate0(CfTranslator.ja
+ 
+我的解决办法是：
+通过修改 android-sdk-windows\platforms\android-4(这个目录根据你的情况来定，我的用的是android 1.6)\tools\dx.bat 文件
+加入：set javaOpts=-Xmx512M (可以设置更大点)
+再ant就OK
+=======================
+打包uc渠道，在生成dex阶段，会出现如下错误：
+ UNEXPECTED TOP-LEVEL EXCEPTION:
+     [exec]     [apply] java.lang.IllegalArgumentException: already added: Lcn/uc/a/a/a/a;
+说明有重复的jar包存在
