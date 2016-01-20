@@ -4,8 +4,8 @@ bad class file magic (cafebabe) or version (0033.0000)
 
 解决方案：jdk版本问题，不要使用1.7的，用1.6的
 
-小米——ok
-华为——打包成功，登录不进去
+小米——OK
+华为——OK
 oppo——缺少资源
 self——没有把渠道过滤掉
 UC——OK
@@ -42,3 +42,31 @@ r.java:252)
  UNEXPECTED TOP-LEVEL EXCEPTION:
      [exec]     [apply] java.lang.IllegalArgumentException: already added: Lcn/uc/a/a/a/a;
 说明有重复的jar包存在
+
+
+
+01-02 08:05:39.339: I/running(3051): 计算方向时，当前X/Y轴离目标点距离：2320.0 / -1872.0
+
+
+使用>>1,要加上（）
+
+玩家在游戏里，同一个账号再次登录，不会调到登录界面
+
+断线重连 有bug
+
+整理npcoptionwindow
+
+连接袁婷霞的服务器，然后 提示 无法连接，
+
+角色选择的 那一行可以封装成一个对象
+
+ys 123 37级
+
+龙狼斗 位置往下
+
+两个账号，两个地方登陆 ，不会退出去。
+
+optionwindow
+
+斗仙之门
+
