@@ -78,17 +78,67 @@ SurfaceView(5081): surfaceChanged -- format=4 w=1280 h=720
 
 在登录
 
-01-07 10:54:25.350: I/logout(21048): ++++++++++++++++++++
 
 
 断线重连，连接成功之后，请求1001
 
-new Socket error!!!
 
-
-背包数据
-怪物
+断线重连下发的数据：
+背包数据：测试 增加新的物品
+怪物：
 1322-回购
-玩家的位置
+玩家的位置：玩家走路——测试OK
+任务重发，弹出 是否接收
+功能开放的数据，会出现两个图标
+怪物入侵 会提前结算
+
 
 测试下静慰那边的 任务会不会闪退？
+
+字体描边会损耗性能
+
+测试点：
+临时解决 在创建角色和选择角色，不断返回切换时，造成的闪退
+
+
+结束新手引导时，要把整个游戏的资源释放掉，scene要置空。
+
+
+
+
+01-13 16:16:16.555: I/common_model(21264): SilkroadActivity-onRestart
+01-13 16:16:16.560: I/common_model(21264): SilkroadActivity-onResume
+01-13 16:16:18.695: I/common_model(21264): SilkroadActivity-onPause
+01-13 16:16:19.585: I/common_model(21264): SilkroadActivity-onStop
+01-13 16:16:20.540: I/common_model(21264): SilkroadActivity-onDestroy
+01-13 16:16:27.870: I/common_model(22340): SilkroadActivity-onResume
+
+
+NegativeArraySizeException
+
+
+=====
+资源优化
+1.压缩资源，特别是大图 工具：按图大小排序
+2.异步加载资源+对象池
+=====
+玩家事件的优先级
+1.新手指引
+2.一些不能关闭玩家窗口的操作，如果 强化等二级界面
+3.功能开放
++++++
+两种僵尸怪的问题
+1.有一只怪在两个玩家的屏幕视野交集里。但是 两个玩家互相看不到对方。
+2.客户端 发送了一只 服务端不存在的怪物，服务端强制 把该怪物 判定为死亡。【在妖八阵的孙尚香出现的】
+
+
+蛮灵 大招 
+剑客 大招 
+
+01-15 11:29:18.313: W/dalvikvm(9309): threadid=14: thread exiting with uncaught exception (group=0x4189eba8)
+
+
+窗口：
+关闭按钮设为不可见时，设置 关闭区域为0.可见时，按照 topblack是否为0，设置 关闭区域。
+
+Android的本地缓存是否可以永久保存？
